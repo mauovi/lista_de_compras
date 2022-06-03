@@ -8,6 +8,9 @@ const addItem = (e) => {
   document.getElementById("item").value = "";
   document.getElementById("quantity").value = "";
   writteList(items);
+  const cantidad_item = document.getElementById("cantidad_items");
+  console.log(cantidad_item);
+  cantidad_item.innerHTML = ` Cantidad de items: ${items.length}`;
 };
 
 const itemList = (obj, index) => {
@@ -31,6 +34,9 @@ const writteList = (list) => {
 const eliminar = (position) => {
   items.splice(position, 1);
   writteList(items);
+  const cantidad_item = document.getElementById("cantidad_items");
+  console.log(cantidad_item);
+  cantidad_item.innerHTML = ` Cantidad de items: ${items.length}`;
 };
 
 var form = document.forms.namedItem("items-form");
